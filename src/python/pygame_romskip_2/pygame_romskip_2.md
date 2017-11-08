@@ -10,7 +10,9 @@ tags:
 ---
 
 # Introduksjon {.intro}
-I denne oppgaven skal vi jobbe videre med romskipsspillet vårt fra [del 1](/python/pygame_intro/pygame_intro.html). Vi starter med den samme koden som vi hadde sist, men uten romskipet! Denne gangen skal vi nemlig tegne romskipet på en litt annen måte.
+I denne oppgaven skal vi jobbe videre med romskipsspillet vårt fra [del 1](/python/pygame_intro/pygame_intro.html), og nå skal vi lære å styre romskipet!
+
+Vi starter med den samme koden som vi hadde sist, men uten romskipet! Denne gangen skal vi nemlig tegne romskipet på en litt annen måte.
 
 Det er viktig at du har de samme bildene som sist liggende sammen med koden.
 
@@ -185,6 +187,12 @@ I del 1 snakket vi om "hendelser" (events på engelsk), og vi sjekker allerede e
 ```
 
 Her er det viktig å holde innrykkene riktig, det er nemlig to if-tester inni hverandre her; Vi sjekker først *om* en tast ble trykket ned, og hvis det er sant, så sjekker *hvilken* tast som ble trykket ned.
+
+Det siste skrittet er å ta `x_change`-verdien vår og putte den inn i `updatePosition`-funksjonen vi laget. Skriv inn følgende, etter at vi har sjekket hendelsene, og før vi tegner romskipet:
+
+```python
+    ship.updatePosition(x_change)
+```
 
 - [ ] Kjør programmet og se hva som skjer. Du skal nå kunne styre romskipet med høyre og venstre piltast
 
